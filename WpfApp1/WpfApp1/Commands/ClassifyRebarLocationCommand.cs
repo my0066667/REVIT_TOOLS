@@ -8,7 +8,7 @@ using System.Text;
 namespace WpfApp1.Commands
 {
     [Transaction(TransactionMode.Manual)]
-    internal class ClassifyRebarLocationCommand : IExternalCommand
+    public class ClassifyRebarLocationCommand : IExternalCommand
     {
         public Result Execute(ExternalCommandData commandData, ref string message, ElementSet elements)
         {
