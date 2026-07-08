@@ -36,9 +36,6 @@ ScaffoldingReadMe.txt
 # NuGet Symbol Packages
 *.snupkg
 
-# dotenv environment variables file
-.env
-
 # Others
 ~$*
 *~
@@ -55,3 +52,21 @@ CodeCoverage/
 *.VisualState.xml
 TestResult.xml
 nunit-*.xml
+*.vsidx
+*.v2
+*.db-shm
+/TestTekla/.vs
+/TestTekla/.vscode
+TestTekla/output.txt
+*.slnx
+*.user
+*.sh
+*.ps1
+*.log
+PPVCRevit/build/.editorconfig
+*.pdb
+*.wxs
+*.wixobj
+*.slnx
+*.yml
+*.user
