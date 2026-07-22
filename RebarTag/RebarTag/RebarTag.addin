@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<RevitAddIns>
+  <AddIn Type="Application">
+    <Name>RebarTag</Name>
+    <Assembly>D:\Visual Studio\Work C#\RebarTag\RebarTag\bin\Debug\net8.0-windows\RebarTag.dll</Assembly>
+    <AddInId>2E78C2A5-379B-4960-8E3B-79A96D024227</AddInId>
+    <FullClassName>RebarTag.Application.RebarTagApplication</FullClassName>
+    <VendorId>BIMT</VendorId>
+    <VendorDescription>RebarTag BIM tools</VendorDescription>
+  </AddIn>
+</RevitAddIns>
