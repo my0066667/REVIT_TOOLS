@@ -1,0 +1,14 @@
+<RevitAddIns>
+	<AddIn Type="Application">
+		<Name>PPVCREVIT</Name>
+		<Assembly>PPVCREVIT\PPVCREVIT.dll</Assembly>
+		<AddInId>374B560F-87B0-4C0F-9D23-5BE31DBC2F3F</AddInId>
+		<FullClassName>PPVCREVIT.Application</FullClassName>
+		<VendorId>Development</VendorId>
+		<VendorDescription></VendorDescription>
+	</AddIn>
+	<ManifestSettings>
+		<UseRevitContext>False</UseRevitContext>
+		<ContextName>PPVCREVIT</ContextName>
+	</ManifestSettings>
+</RevitAddIns>
