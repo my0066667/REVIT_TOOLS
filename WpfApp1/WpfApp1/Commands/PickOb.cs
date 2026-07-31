@@ -19,17 +19,39 @@ namespace WpfApp1.Commands.Model
             UIDocument uidoc = uiapp.ActiveUIDocument;
             Document doc = uidoc.Document;
 
-            IList<Reference> references = uidoc.Selection.PickObjects(ObjectType.Element, new WallSelectFilter());
-            StringBuilder sb = new StringBuilder();
-            foreach (Reference reference in references) 
-            {
-                Element element = doc.GetElement(reference);
-                ElementId id = element.Id;
-                sb.AppendLine("ElementID :" + id.ToString());
-            }
-            TaskDialog.Show("Addin_v26", sb.ToString());
+            //IList<Reference> references = uidoc.Selection.PickObjects(ObjectType.Element, new WallSelectFilter());
+            //StringBuilder sb = new StringBuilder();
+            //foreach (Reference reference in references) 
+            //{
+            //    Element element = doc.GetElement(reference);
+            //    ElementId id = element.Id;
+            //    sb.AppendLine("ElementID :" + id.ToString());
+            //}
+            //TaskDialog.Show("Addin_v26", sb.ToString());
 
-            return Result.Succeeded;
+            //return Result.Succeeded;
+            StringBuilder sb = new StringBuilder();
+            try
+            {
+                IList<Reference> references = uidoc.Selection.PickObjects(ObjectType.Element, new WallSelectFilter());
+                foreach (Reference reference in references)
+                {
+                    Element element = doc.GetElement(reference);
+                    ElementId id = element.Id;
+                    string name = element.Name;
+                    Category category = element.Category;
+                    string catename = category.Name;
+                    ElementId levelId= element.LevelId;
+                    Level level = doc.GetElement(levelId) as Level;
+                    sb.AppendLine("Model:" + name + level);
+                }
+            }
+            catch
+            {
+                TaskDialog.Show("Addin_v26", "Fail, please try again");
+            }
+            TaskDialog.Show("Done",sb.ToString());
+            return Result.Cancelled;
         }
         public class WallSelectFilter : ISelectionFilter
         {
