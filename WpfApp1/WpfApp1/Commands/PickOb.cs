@@ -38,12 +38,23 @@ namespace WpfApp1.Commands.Model
                 {
                     Element element = doc.GetElement(reference);
                     ElementId id = element.Id;
-                    string name = element.Name;
-                    Category category = element.Category;
-                    string catename = category.Name;
-                    ElementId levelId= element.LevelId;
-                    Level level = doc.GetElement(levelId) as Level;
-                    sb.AppendLine("Model:" + name + level);
+                    Options options = new Options();
+                    GeometryElement geo = element.get_Geometry(options);
+                    foreach(GeometryObject obj in geo)
+                    {
+                        if(obj is Solid solid && solid.Volume > 0)
+                        {
+                            foreach(Face face in solid.Faces)
+                            {
+
+                            }   
+                            foreach(Edge edge in solid.Edges)
+                            {
+
+                            }    
+                        }
+                    }    
+                    sb.AppendLine("Model:" + id);
                 }
             }
             catch
