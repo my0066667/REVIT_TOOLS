@@ -50,9 +50,9 @@ namespace WpfApp1.Commands.Model
             }
             catch
             {
-                return Result.Failed;
+                return Result.Succeeded;
             }
-           return Result.Succeeded;
+           return Result.Failed;
         }
         public class rebarFilter : ISelectionFilter
         {
