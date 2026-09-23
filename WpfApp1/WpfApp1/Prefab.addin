@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<RevitAddIns>
+	<AddIn Type="Command">
+		<Assembly>WpfApp1.dll</Assembly>
+		<AddInId>2379B853-36E4-461F-9171-245EDE4721</AddInId>
+		<FullClassName>HelloWorld.Class1</FullClassName>
+		<Text>HelloWorld</Text>
+		<VendorId>ADSK</VendorId>
+		<VendorDescription>Autodesk, www.autodesk.com</VendorDescription>
+	</AddIn>
+</RevitAddIns>
