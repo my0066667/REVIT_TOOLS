@@ -21,11 +21,13 @@ namespace WpfApp1.Commands
             View viewId = uidoc.ActiveView;
             try
             {
-                var column = new FilteredElementCollector(doc, viewId.Id).OfCategory(BuiltInCategory.OST_StructuralFraming).ToElements();
-                var ele = column.ToString();
-                TaskDialog.Show("Tool" , "column id: " + ele);
-                MessageBox.Show("column count: " + column);
-   
+                var column = new FilteredElementCollector(doc, viewId.Id).OfCategory(BuiltInCategory.OST_StructuralFraming).ToElementIds();
+                foreach (var element in column) 
+                {
+                    Element ele = doc.GetElement(element);
+                    string cot = ele.Name;
+                    MessageBox.Show("column count: " + cot);
+                }
             }
             catch
             {
