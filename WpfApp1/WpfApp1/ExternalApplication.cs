@@ -17,10 +17,17 @@ namespace PREFAB
         public Result OnStartup(UIControlledApplication application)
         {
             string tab = "PREFAB";
-            application.CreateRibbonTab(tab);
-            application.CreateRibbonPanel(tab, "For Dimension");
-            application.CreateRibbonPanel(tab, "For Model");
-            application.CreateRibbonPanel(tab, "For Checking");
+            try
+            {
+                application.CreateRibbonTab(tab);
+                application.CreateRibbonPanel(tab, "For Dimension");
+                application.CreateRibbonPanel(tab, "For Model");
+                application.CreateRibbonPanel(tab, "For Checking");
+            }
+            catch (Exception)
+            {
+                TaskDialog.Show("Error!", "Duplicate ribbon tab!");
+            }
             return Result.Succeeded;
         }
         
