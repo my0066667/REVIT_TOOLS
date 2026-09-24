@@ -8,7 +8,7 @@ using Autodesk.Revit.Attributes;
 using Autodesk.Revit.DB;
 using Autodesk.Revit.UI;
 
-namespace WpfApp1.Commands
+namespace PREFAB.Commands
 {
     [Transaction(TransactionMode.Manual)]
     public class Model : IExternalCommand
@@ -26,7 +26,7 @@ namespace WpfApp1.Commands
                 {
                     Element ele = doc.GetElement(element);
                     string cot = ele.Name;
-                    MessageBox.Show("column count: " + cot);
+                    MessageBox.Show("column: " + cot);
                 }
             }
             catch

@@ -30,4 +30,8 @@
     </Reference>
   </ItemGroup>
 
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="if not exist &quot;C:\Users\tran_huyenmy\AppData\Roaming\Autodesk\Revit\Addins\2026&quot; mkdir &quot;C:\Users\tran_huyenmy\AppData\Roaming\Autodesk\Revit\Addins\2026&quot;&#xD;&#xA;&#xD;&#xA;copy /Y &quot;$(ProjectDir)*.addin&quot; &quot;C:\Users\tran_huyenmy\AppData\Roaming\Autodesk\Revit\Addins\2026\&quot;&#xD;&#xA;copy /Y &quot;$(TargetPath)&quot; &quot;C:\Users\tran_huyenmy\AppData\Roaming\Autodesk\Revit\Addins\2026\&quot;" />
+  </Target>
+
 </Project>

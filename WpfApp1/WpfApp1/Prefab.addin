@@ -1,15 +1,14 @@
-﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
-<RevitAddIns>
-	<AddIn Type="Command">
-		<Assembly>WpfApp1.dll</Assembly>
+﻿<RevitAddIns>
+	<AddIn Type="Application">
+		<Name>PREFAB</Name>
+		<Assembly>PREFAB.dll</Assembly>
 		<AddInId>2419C9F5-F901-41DB-87FF-FE669D3A03C1</AddInId>
-		<FullClassName>WpfApp1.Commands.Model</FullClassName>
-		<Text>HelloWorld</Text>
-		<VendorId>ADSK</VendorId>
-		<VendorDescription>Autodesk, www.autodesk.com</VendorDescription>
+		<FullClassName>PREFAB.ExternalApplication</FullClassName>
+		<VendorId>Development</VendorId>
+		<VendorDescription></VendorDescription>
 	</AddIn>
 	<ManifestSettings>
 		<UseRevitContext>False</UseRevitContext>
-		<ContextName>PREFAB</ContextName>
+		<ContextName>PPVCREVIT</ContextName>
 	</ManifestSettings>
 </RevitAddIns>
