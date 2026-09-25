@@ -11,7 +11,7 @@ using Autodesk.Revit.UI;
 namespace PREFAB.Commands
 {
     [Transaction(TransactionMode.Manual)]
-    public class Model : IExternalCommand
+    public class ForModeling : IExternalCommand
     {
         public Result Execute(ExternalCommandData commandData, ref string message, ElementSet elements)
         {
